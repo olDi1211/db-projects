@@ -1,4 +1,4 @@
-package jdbctests;
+package jdbctests.day4;
 
 import java.sql.*;
 
@@ -16,25 +16,25 @@ public class TestConnection {
 
         //once you setup connection default pointer looks for 0
         //next() --> move pointer to first row
-        //resultSet.next();
+        resultSet.next();
 
         //getting information with column name
-        //System.out.println("resultSet.getString(\"region_name\") = " + resultSet.getString("region_name"));
+        System.out.println("resultSet.getString(\"region_name\") = " + resultSet.getString("region_name"));
 
         //getting information with column number
-        //System.out.println("resultSet.getString(2) = " + resultSet.getString(2));
+        System.out.println("resultSet.getString(2) = " + resultSet.getString(2));
 
         //1- Europe
         //2- Americas
-        //System.out.println(resultSet.getInt(1)+ " - " + resultSet.getString(2));
+        System.out.println(resultSet.getInt(1)+ " - " + resultSet.getString(2));
 
         //move to second row
-        //resultSet.next();
-        //System.out.println(resultSet.getInt(1)+ " - " + resultSet.getString(2));
+        resultSet.next();
+        System.out.println(resultSet.getInt(1)+ " - " + resultSet.getString(2));
 
         //move to third row
-        //resultSet.next();
-        //System.out.println(resultSet.getInt(1)+ " - " + resultSet.getString(2));
+        resultSet.next();
+        System.out.println(resultSet.getInt(1)+ " - " + resultSet.getString(2));
 
         while (resultSet.next()){
             System.out.println(resultSet.getInt(1)+ " - " + resultSet.getString(2));
